@@ -103,22 +103,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Submission Handler
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const formData = new FormData(contactForm);
-    
-    // Show success message (you can replace this with actual form submission logic)
-    showNotification('Thank you for your interest! We will contact you soon.', 'success');
-    
-    // Reset form
-    contactForm.reset();
-});
-
 // Notification System
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
