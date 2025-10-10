@@ -58,6 +58,8 @@ The website can be deployed to any static hosting service:
 ## 🎨 Customization
 
 ### Colors
+See **[COLOR_RESOURCES_INDEX.md](COLOR_RESOURCES_INDEX.md)** for a complete guide to color palette options and recommendations.
+
 Edit CSS variables in `styles.css`:
 ```css
 :root {
@@ -67,6 +69,13 @@ Edit CSS variables in `styles.css`:
     /* ... more colors */
 }
 ```
+
+**Color Resources:**
+- 🏠 [Color Resources Index](COLOR_RESOURCES_INDEX.md) - **Start here!** Navigation guide to all resources
+- 📊 [Palette Summary](PALETTE_SUMMARY.md) - Executive summary and business case
+- 🎨 [Color Swatches](color-swatches.html) - Interactive visual comparison tool
+- ⚡ [Quick Reference](COLOR_QUICK_REFERENCE.md) - Implementation guide with copy-paste code
+- 📚 [Complete Guide](COLOR_PALETTE_GUIDE.md) - Detailed analysis of all 4 palette options
 
 ### Content
 - Edit text directly in `index.html`
