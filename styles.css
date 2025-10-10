@@ -6,17 +6,20 @@
 }
 
 :root {
-    --primary-color: #0066cc;
-    --secondary-color: #00a8e8;
-    --accent-color: #ff6b35;
-    --dark-color: #1a1a2e;
-    --light-color: #f8f9fa;
-    --text-color: #333;
-    --text-light: #666;
+    /* Modern Tech Premium Palette */
+    --primary-color: #0052CC;
+    --secondary-color: #0078D4;
+    --accent-color: #FF6F3C;
+    --accent-secondary: #6C63FF;
+    --dark-color: #1C1E26;
+    --dark-secondary: #2D3142;
+    --light-color: #F5F7FA;
+    --text-color: #2D3748;
+    --text-light: #718096;
     --white: #ffffff;
-    --gradient: linear-gradient(135deg, #0066cc 0%, #00a8e8 100%);
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --gradient: linear-gradient(135deg, #0052CC 0%, #0078D4 50%, #6C63FF 100%);
+    --shadow: 0 10px 30px rgba(0, 82, 204, 0.1);
+    --shadow-hover: 0 15px 40px rgba(0, 82, 204, 0.15);
 }
 
 html {
@@ -169,6 +172,10 @@ body {
 .highlight {
     color: var(--accent-color);
     position: relative;
+}
+
+.highlight .logo-x {
+    color: #dc3545 !important;
 }
 
 .hero-subtitle {
