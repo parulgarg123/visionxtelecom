@@ -53,6 +53,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 20px;
+    gap: 2rem;
 }
 
 .logo {
@@ -238,6 +239,20 @@ body {
     transform: translateY(-3px);
 }
 
+.btn-matching {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-matching:hover {
+    background: #ff5722;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -333,92 +348,6 @@ body {
     line-height: 1.6;
 }
 
-/* Plans Section */
-.plans {
-    padding: 5rem 0;
-    background: var(--white);
-}
-
-.plans-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.plan-card {
-    background: var(--white);
-    border: 2px solid #e0e0e0;
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.plan-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-}
-
-.plan-card.featured {
-    border-color: var(--primary-color);
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 168, 232, 0.05) 100%);
-    transform: scale(1.05);
-}
-
-.plan-badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--text-light);
-    color: var(--white);
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.plan-badge.popular {
-    background: var(--accent-color);
-}
-
-.plan-name {
-    font-size: 1.8rem;
-    margin: 1rem 0;
-    color: var(--dark-color);
-}
-
-.plan-price {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin: 1.5rem 0;
-}
-
-.plan-price .currency {
-    font-size: 1.5rem;
-    vertical-align: top;
-}
-
-.plan-price .period {
-    font-size: 1.2rem;
-    color: var(--text-light);
-}
-
-.plan-features {
-    list-style: none;
-    margin: 2rem 0;
-    text-align: left;
-}
-
-.plan-features li {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: var(--text-color);
-}
-
 /* About Section */
 .about {
     padding: 5rem 0;
@@ -436,6 +365,13 @@ body {
     margin: 1rem 0;
     color: var(--text-light);
     line-height: 1.8;
+}
+
+.about-text h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
 }
 
 .stats {
@@ -664,6 +600,86 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: auto;
+    padding: 3rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.modal-content p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.close-modal {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    color: var(--text-light);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--dark-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Animations */
 .animate-on-scroll {
     opacity: 0;
@@ -735,12 +751,12 @@ body {
         justify-content: space-around;
     }
 
-    .plan-card.featured {
-        transform: scale(1);
-    }
-
     .section-title {
         font-size: 2rem;
+    }
+
+    .btn-matching {
+        display: none;
     }
 }
 

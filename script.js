@@ -15,6 +15,31 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+// Start Matching Modal
+const startMatchingBtn = document.getElementById('startMatchingBtn');
+const matchingModal = document.getElementById('matchingModal');
+const closeModal = document.querySelector('.close-modal');
+
+if (startMatchingBtn) {
+    startMatchingBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        matchingModal.classList.add('active');
+    });
+}
+
+if (closeModal) {
+    closeModal.addEventListener('click', () => {
+        matchingModal.classList.remove('active');
+    });
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target === matchingModal) {
+        matchingModal.classList.remove('active');
+    }
+});
+
 // Navbar scroll effect
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
@@ -180,15 +205,7 @@ document.querySelectorAll('.service-card').forEach(card => {
     });
 });
 
-// Add pulse effect to plan cards on hover
-document.querySelectorAll('.plan-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        const badge = this.querySelector('.plan-badge');
-        if (badge) {
-            badge.style.animation = 'pulse 0.5s ease';
-        }
-    });
-});
+
 
 // Dynamic network visualization animation
 const networkNodes = document.querySelectorAll('.network-node');
@@ -229,7 +246,7 @@ const createScrollProgress = () => {
 createScrollProgress();
 
 // Add tilt effect to cards
-document.querySelectorAll('.service-card, .plan-card').forEach(card => {
+document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
