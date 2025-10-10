@@ -58,7 +58,7 @@ The website can be deployed to any static hosting service:
 ## 🎨 Customization
 
 ### Colors
-See **[COLOR_PALETTE_GUIDE.md](COLOR_PALETTE_GUIDE.md)** for detailed analysis of current colors and premium palette recommendations.
+See **[COLOR_RESOURCES_INDEX.md](COLOR_RESOURCES_INDEX.md)** for a complete guide to color palette options and recommendations.
 
 Edit CSS variables in `styles.css`:
 ```css
@@ -71,8 +71,11 @@ Edit CSS variables in `styles.css`:
 ```
 
 **Color Resources:**
-- [Color Palette Guide](COLOR_PALETTE_GUIDE.md) - Comprehensive color analysis and recommendations
-- [Color Swatches](color-swatches.html) - Visual comparison of all palette options
+- 🏠 [Color Resources Index](COLOR_RESOURCES_INDEX.md) - **Start here!** Navigation guide to all resources
+- 📊 [Palette Summary](PALETTE_SUMMARY.md) - Executive summary and business case
+- 🎨 [Color Swatches](color-swatches.html) - Interactive visual comparison tool
+- ⚡ [Quick Reference](COLOR_QUICK_REFERENCE.md) - Implementation guide with copy-paste code
+- 📚 [Complete Guide](COLOR_PALETTE_GUIDE.md) - Detailed analysis of all 4 palette options
 
 ### Content
 - Edit text directly in `index.html`
