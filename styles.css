@@ -170,7 +170,7 @@ body {
 }
 
 .highlight {
-    color: var(--accent-color);
+    color: var(--white);
     position: relative;
 }
 
