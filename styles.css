@@ -583,6 +583,12 @@ body {
     gap: 0.5rem;
 }
 
+/* Footer logo color overrides for visibility */
+.footer .logo-vision,
+.footer .logo-telecom {
+    color: var(--white);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
