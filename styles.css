@@ -67,11 +67,20 @@ body {
 
 .logo-icon {
     font-size: 2rem;
-    animation: float 3s ease-in-out infinite;
 }
 
 .logo-vision {
-    color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.logo-x {
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.logo-telecom {
+    color: var(--primary-color);
     font-weight: 700;
 }
 
@@ -312,9 +321,12 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-card {
@@ -356,26 +368,83 @@ body {
 /* About Section */
 .about {
     padding: 5rem 0;
-    background: var(--light-color);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
 
-.about-text h3 {
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
-    font-size: 2rem;
+.about-text {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
 }
 
-.about-text p {
-    margin: 0;
+.about-text .section-title {
+    margin-bottom: 2rem;
+}
+
+.about-description {
     color: var(--text-color);
     line-height: 1.8;
     font-size: 1.1rem;
+    text-align: left;
+}
+
+.mission-box {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-hover);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.mission-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.mission-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.mission-box p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -435,35 +504,83 @@ body {
 }
 
 .social-media .social-links {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .social-media .social-link {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    background: var(--light-color);
-    border-radius: 50px;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: 15px;
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--text-color);
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
 }
 
 .social-media .social-link:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
-    background: var(--primary-color);
-    color: var(--white);
 }
 
 .social-icon {
-    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+}
+
+.instagram-link {
+    border-top: 4px solid #E1306C;
+}
+
+.instagram-link .social-icon {
+    color: #E1306C;
+}
+
+.instagram-link:hover {
+    background: #E1306C;
+    color: var(--white);
+}
+
+.instagram-link:hover .social-icon {
+    color: var(--white);
+}
+
+.snapchat-link {
+    border-top: 4px solid #FFFC00;
+}
+
+.snapchat-link .social-icon {
+    color: #000000;
+}
+
+.snapchat-link:hover {
+    background: #FFFC00;
+    color: #000000;
+}
+
+.whatsapp-link {
+    border-top: 4px solid #25D366;
+}
+
+.whatsapp-link .social-icon {
+    color: #25D366;
+}
+
+.whatsapp-link:hover {
+    background: #25D366;
+    color: var(--white);
+}
+
+.whatsapp-link:hover .social-icon {
+    color: var(--white);
 }
 
 .contact-form {
@@ -693,8 +810,7 @@ body {
     }
 
     .social-media .social-links {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .section-title {
@@ -714,6 +830,7 @@ body {
     .plans-grid,
     .services-grid {
         grid-template-columns: 1fr;
+        max-width: 100%;
     }
 
     .hero-buttons {
