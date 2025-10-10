@@ -6,20 +6,20 @@
 }
 
 :root {
-    /* Modern Tech Premium Palette */
-    --primary-color: #0052CC;
-    --secondary-color: #0078D4;
-    --accent-color: #FF6F3C;
-    --accent-secondary: #6C63FF;
-    --dark-color: #1C1E26;
-    --dark-secondary: #2D3142;
-    --light-color: #F5F7FA;
-    --text-color: #2D3748;
-    --text-light: #718096;
+    /* Premium Grey/Black/White Palette */
+    --primary-color: #1a1a1a;
+    --secondary-color: #4a4a4a;
+    --accent-color: #2d2d2d;
+    --accent-secondary: #666666;
+    --dark-color: #0a0a0a;
+    --dark-secondary: #1f1f1f;
+    --light-color: #f5f5f5;
+    --text-color: #2d2d2d;
+    --text-light: #6b6b6b;
     --white: #ffffff;
-    --gradient: linear-gradient(135deg, #0052CC 0%, #0078D4 50%, #6C63FF 100%);
-    --shadow: 0 10px 30px rgba(0, 82, 204, 0.1);
-    --shadow-hover: 0 15px 40px rgba(0, 82, 204, 0.15);
+    --gradient: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 50%, #2d2d2d 100%);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 html {
@@ -139,7 +139,7 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #0066cc 0%, #00a8e8 50%, #0066cc 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
     color: var(--white);
     margin-top: 70px;
 }
@@ -217,9 +217,9 @@ body {
 }
 
 .btn-primary:hover {
-    background: #ff5722;
+    background: var(--dark-color);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-secondary {
@@ -251,13 +251,13 @@ body {
     color: var(--white);
     padding: 0.8rem 1.5rem;
     font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-matching:hover {
-    background: #ff5722;
+    background: var(--dark-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .scroll-indicator {
@@ -358,7 +358,7 @@ body {
 /* About Section */
 .about {
     padding: 5rem 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
 }
 
 .about-content {
@@ -742,7 +742,14 @@ body {
     }
 
     .btn-matching {
-        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        width: calc(100% - 40px);
+        max-width: 300px;
+        text-align: center;
     }
 }
 
