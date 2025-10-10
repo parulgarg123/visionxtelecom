@@ -214,6 +214,7 @@ body {
 .btn-primary {
     background: var(--accent-color);
     color: var(--white);
+    border: 2px solid var(--white);
 }
 
 .btn-primary:hover {
